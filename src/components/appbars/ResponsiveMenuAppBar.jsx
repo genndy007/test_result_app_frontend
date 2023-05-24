@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import BugReportIcon from '@mui/icons-material/BugReport';
 
-import userIcon from '../assets/images/user-icon.png'
+import userIcon from '../../assets/images/user-icon.png'
 
 const pages = ['Projects', 'Test Cases', 'Test Suites', 'Test Runs'];
 const settings = ['Profile', 'Settings', 'Logout'];

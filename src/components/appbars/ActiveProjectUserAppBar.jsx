@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 const ActiveProjectUserAppBar = ({projectName, userName}) => {
   return (
     <AppBar position="static" sx={{ bgcolor: "green" }}>
-      <Container maxWidth="xl">
+      <Container>
         <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <Typography
             noWrap
@@ -25,7 +25,6 @@ const ActiveProjectUserAppBar = ({projectName, userName}) => {
             noWrap
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
               fontFamily: 'monospace',
               fontWeight: 500,
               color: 'inherit',
