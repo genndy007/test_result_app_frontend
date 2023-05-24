@@ -1,0 +1,23 @@
+{
+  "name": "test_result_app_frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Diplom project GUI",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "keywords": [
+    "react",
+    "diplom"
+  ],
+  "author": "Hennadii Kochev",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  }
+}
