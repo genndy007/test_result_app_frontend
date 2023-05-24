@@ -18,7 +18,7 @@ import userIcon from '../assets/images/user-icon.png'
 const pages = ['Projects', 'Test Cases', 'Test Suites', 'Test Runs'];
 const settings = ['Profile', 'Settings', 'Logout'];
 
-function ResponsiveAppBar() {
+function ResponsiveMenuAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -108,7 +108,7 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -161,4 +161,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default ResponsiveMenuAppBar;

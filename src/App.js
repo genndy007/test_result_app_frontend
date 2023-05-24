@@ -1,10 +1,10 @@
 import React from "react";
-import ResponsiveAppBar from "./components/ResponsiveAppBar";
+import ResponsiveMenuAppBar from "./components/ResponsiveMenuAppBar";
 
 function App() {
     return (
         <div className="App">
-            <ResponsiveAppBar/>
+            <ResponsiveMenuAppBar/>
             App works!
         </div>
     );
