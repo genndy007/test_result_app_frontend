@@ -8,7 +8,7 @@ const ActiveProjectUserAppBar = ({projectName, userName}) => {
   return (
     <AppBar position="static" sx={{ bgcolor: "green" }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <Typography
             noWrap
             sx={{
