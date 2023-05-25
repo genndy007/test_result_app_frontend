@@ -12,33 +12,23 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import BugReportIcon from '@mui/icons-material/BugReport';
+
 
 import {pages, settings} from '../../../utils/TestingItems'
 
 import userIcon from '../../../assets/images/user-icon.png'
 import MyLink from "./MyLink";
-import {Fragment} from "react";
 import MyLogo from "./MyLogo";
 
 function MainAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const handleOpenNavMenu = (event) => { setAnchorElNav(event.currentTarget) };
+  const handleOpenUserMenu = (event) => { setAnchorElUser(event.currentTarget) };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const handleCloseNavMenu = () => { setAnchorElNav(null) };
+  const handleCloseUserMenu = () => { setAnchorElUser(null) };
 
   return (
     <AppBar position="static">
