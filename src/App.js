@@ -24,6 +24,9 @@ function App() {
             <Route path="test_cases" element={<TestCasesPage/>} />
             <Route path="test_suites" element={<TestSuitesPage/>}/>
             <Route path="test_runs" element={<TestRunsPage/>}/>
+
+            <Route path="/settings" element={<div>Settings</div>} />
+            <Route path="/logout" element={<div>Logout</div>} />
           </Routes>
         </div>
     );

@@ -15,11 +15,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import BugReportIcon from '@mui/icons-material/BugReport';
 
-import {pages} from '../../utils/TestingItems'
+import {pages, settings} from '../../utils/TestingItems'
 
 import userIcon from '../../assets/images/user-icon.png'
-
-const settings = ['Profile', 'Settings', 'Logout'];
 
 function ResponsiveMenuAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -155,8 +153,10 @@ function ResponsiveMenuAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">
+                    <Link style={{textDecoration: "none", color: "black"}} to={setting.path}>{setting.name}</Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
