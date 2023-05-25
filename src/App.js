@@ -1,13 +1,8 @@
 import React from "react";
-import {Route, Routes} from "react-router";
 
 import ResponsiveMenuAppBar from "./components/appbars/ResponsiveMenuAppBar";
 import ActiveProjectUserAppBar from "./components/appbars/ActiveProjectUserAppBar";
-
-import ProjectsPage from "./pages/ProjectsPage";
-import TestCasesPage from "./pages/TestCasesPage";
-import TestSuitesPage from "./pages/TestSuitesPage";
-import TestRunsPage from "./pages/TestRunsPage";
+import MainRouter from "./components/MainRouter";
 
 import {projects} from "./utils/TestingItems"
 
@@ -18,16 +13,7 @@ function App() {
           <br/>
           <ResponsiveMenuAppBar/>
           <br/>
-          <Routes>
-            <Route path="/" element={<div>Home</div>} />
-            <Route path="projects" element={<ProjectsPage/>} />
-            <Route path="test_cases" element={<TestCasesPage/>} />
-            <Route path="test_suites" element={<TestSuitesPage/>}/>
-            <Route path="test_runs" element={<TestRunsPage/>}/>
-
-            <Route path="/settings" element={<div>Settings</div>} />
-            <Route path="/logout" element={<div>Logout</div>} />
-          </Routes>
+          <MainRouter/>
         </div>
     );
 }
