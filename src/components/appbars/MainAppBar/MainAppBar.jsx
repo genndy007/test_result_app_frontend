@@ -18,6 +18,7 @@ import BugReportIcon from '@mui/icons-material/BugReport';
 import {pages, settings} from '../../../utils/TestingItems'
 
 import userIcon from '../../../assets/images/user-icon.png'
+import MyLink from "./MyLink";
 
 function MainAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -93,7 +94,7 @@ function MainAppBar() {
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link style={{textDecoration: "none", color: "black"}} to={page.path}>{page.name}</Link>
+                    <MyLink color="black" to={page.path} name={page.name}/>
                   </Typography>
                 </MenuItem>
               ))}
@@ -125,7 +126,7 @@ function MainAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link style={{textDecoration: "none", color: "white"}} to={page.path}>{page.name}</Link>
+                <MyLink color="white" to={page.path} name={page.name}/>
               </Button>
             ))}
           </Box>
@@ -155,7 +156,7 @@ function MainAppBar() {
               {settings.map((setting) => (
                 <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">
-                    <Link style={{textDecoration: "none", color: "black"}} to={setting.path}>{setting.name}</Link>
+                    <MyLink color="black" to={setting.path} name={setting.name}/>
                   </Typography>
                 </MenuItem>
               ))}
