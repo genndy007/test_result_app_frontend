@@ -15,11 +15,11 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import BugReportIcon from '@mui/icons-material/BugReport';
 
-import {pages, settings} from '../../utils/TestingItems'
+import {pages, settings} from '../../../utils/TestingItems'
 
-import userIcon from '../../assets/images/user-icon.png'
+import userIcon from '../../../assets/images/user-icon.png'
 
-function ResponsiveMenuAppBar() {
+function MainAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -93,7 +93,7 @@ function ResponsiveMenuAppBar() {
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link style={{textDecoration: "none", color: "white"}} to={page.path}>{page.name}</Link>
+                    <Link style={{textDecoration: "none", color: "black"}} to={page.path}>{page.name}</Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -166,4 +166,4 @@ function ResponsiveMenuAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveMenuAppBar;
+export default MainAppBar;

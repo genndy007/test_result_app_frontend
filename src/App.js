@@ -1,6 +1,6 @@
 import React from "react";
 
-import ResponsiveMenuAppBar from "./components/appbars/ResponsiveMenuAppBar";
+import MainAppBar from "./components/appbars/MainAppBar/MainAppBar";
 import ActiveProjectUserAppBar from "./components/appbars/ActiveProjectUserAppBar";
 import MainRouter from "./components/MainRouter";
 
@@ -11,7 +11,7 @@ function App() {
         <div className="App">
           <ActiveProjectUserAppBar projectName={projects[0].name} userName="Hennadii Kochev"/>
           <br/>
-          <ResponsiveMenuAppBar/>
+          <MainAppBar/>
           <br/>
           <MainRouter/>
         </div>
