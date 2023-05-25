@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {Link} from "react-router-dom";
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,9 +15,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import BugReportIcon from '@mui/icons-material/BugReport';
 
+import {pages} from '../../utils/TestingItems'
+
 import userIcon from '../../assets/images/user-icon.png'
 
-const pages = ['Projects', 'Test Cases', 'Test Suites', 'Test Runs'];
 const settings = ['Profile', 'Settings', 'Logout'];
 
 function ResponsiveMenuAppBar() {
@@ -90,8 +93,10 @@ function ResponsiveMenuAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                    <Link style={{textDecoration: "none", color: "white"}} to={page.path}>{page.name}</Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -118,11 +123,11 @@ function ResponsiveMenuAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link style={{textDecoration: "none", color: "white"}} to={page.path}>{page.name}</Link>
               </Button>
             ))}
           </Box>
