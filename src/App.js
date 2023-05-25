@@ -9,12 +9,8 @@ import TestCasesPage from "./pages/TestCasesPage";
 import TestSuitesPage from "./pages/TestSuitesPage";
 import TestRunsPage from "./pages/TestRunsPage";
 
+import {projects} from "./utils/TestingItems"
 
-const projects = [
-  {id: 1, name: "Central Database", description: "Main application of company", isActive: true},
-  {id: 2, name: "Affiliate Management Portal", description: "Secondary for influencers", isActive: false},
-  {id: 3, name: "Supplier Order App", description: "Secondary for suppliers", isActive: false},
-]
 function App() {
     return (
         <div className="App">
