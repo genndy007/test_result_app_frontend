@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import SetActiveProjectButton from "../buttons/SetActiveProjectButton";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -40,7 +41,7 @@ const ProjectsTable = ({projects}) => {
             <StyledTableCell>Project Name</StyledTableCell>
             <StyledTableCell align="right">Description</StyledTableCell>
             <StyledTableCell align="right">Is Active</StyledTableCell>
-            <StyledTableCell align="right">Set to be active</StyledTableCell>
+            <StyledTableCell align="right">Change state</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -51,7 +52,7 @@ const ProjectsTable = ({projects}) => {
               </StyledTableCell>
               <StyledTableCell align="right">{project.description}</StyledTableCell>
               <StyledTableCell align="right">{project.isActive ? "Yes" : "No"}</StyledTableCell>
-              <StyledTableCell align="right">{project.isActive ? "" : "Button"}</StyledTableCell>
+              <StyledTableCell align="right">{!project.isActive ? <SetActiveProjectButton projectId={project.id}/> : null}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
