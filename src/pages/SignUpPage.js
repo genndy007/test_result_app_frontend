@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Copyright from "../components/Copyright";
+import MyLink from "../components/appbars/MainAppBar/MyLink";
 
 
 const defaultTheme = createTheme();
@@ -93,7 +94,7 @@ const SignUpPage = () => {
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="I agree to the Rules of Test Result App usage."
                 />
               </Grid>
             </Grid>
@@ -105,14 +106,14 @@ const SignUpPage = () => {
             >
               Sign Up
             </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
-                </Link>
-              </Grid>
-            </Grid>
           </Box>
+
+          <Box>
+            <Button variant="outlined">
+              <MyLink color="#1976D2" to="/login" name="Already have account? Log in"/>
+            </Button>
+          </Box>
+
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>
