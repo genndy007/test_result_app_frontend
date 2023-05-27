@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useNavigate } from "react-router-dom";
+
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -18,10 +20,12 @@ import Copyright from "../components/Copyright";
 const defaultTheme = createTheme();
 
 const SignInPage = ({loginFunc}) => {
+  let navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     loginFunc();
+    navigate('/settings');
     console.log({
       email: data.get('email'),
       password: data.get('password'),

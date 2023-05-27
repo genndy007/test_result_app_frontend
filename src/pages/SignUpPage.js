@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { useNavigate } from "react-router-dom";
+
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -20,9 +21,11 @@ import MyLink from "../components/appbars/MainAppBar/MyLink";
 const defaultTheme = createTheme();
 
 const SignUpPage = () => {
+  let navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    navigate('/login');
     console.log({
       email: data.get('email'),
       password: data.get('password'),
