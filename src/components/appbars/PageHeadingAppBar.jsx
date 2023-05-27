@@ -15,6 +15,7 @@ const PageHeadingAppBar = ({name}) => {
         <Container>
           <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
             <Typography
+              variant="h6"
               noWrap
               sx={{
                 mr: 2,
