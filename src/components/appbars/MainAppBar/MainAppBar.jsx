@@ -20,7 +20,7 @@ import userIcon from '../../../assets/images/user-icon.png'
 import MyLink from "./MyLink";
 import MyLogo from "./MyLogo";
 
-function MainAppBar() {
+function MainAppBar({logoutFunc}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -111,7 +111,7 @@ function MainAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting.name} onClick={setting.name === 'Log Out' ? logoutFunc : handleCloseUserMenu}>
                   <Typography textAlign="center">
                     <MyLink color="black" to={setting.path} name={setting.name}/>
                   </Typography>

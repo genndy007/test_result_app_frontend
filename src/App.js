@@ -9,7 +9,7 @@ function App() {
   return (
       <div className="App">
         {isAuthenticated ? (
-          <TestResultApp/>
+          <TestResultApp logoutFunc={logoutUser}/>
         ) : "Not Authenticated"}
       </div>
   );
