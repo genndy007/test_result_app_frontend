@@ -10,8 +10,6 @@ const MyLogo = ({xs, flexGrow}) => {
       <Typography
         variant="h6"
         noWrap
-        component="a"
-        href="/"
         sx={{
           mr: 2,
           display: display,
