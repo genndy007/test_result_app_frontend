@@ -10,7 +10,7 @@ const HeadingTypography = ({row1, row2}) => {
       noWrap
       sx={{
         mr: 2,
-        fontFamily: 'monospace',
+        fontFamily: 'Helvetica',
         fontWeight: 500,
         color: 'inherit',
         textDecoration: 'none',

@@ -13,7 +13,7 @@ const MyLogo = ({xs, flexGrow}) => {
         sx={{
           mr: 2,
           display: display,
-          fontFamily: 'monospace',
+          fontFamily: 'Helvetica',
           fontWeight: 700,
           flexGrow: flexGrow,
           letterSpacing: '.1rem',

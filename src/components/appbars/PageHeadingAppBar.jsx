@@ -18,7 +18,7 @@ const PageHeadingAppBar = ({name}) => {
               noWrap
               sx={{
                 mr: 2,
-                fontFamily: 'monospace',
+                fontFamily: 'Helvetica',
                 fontWeight: 500,
                 color: 'black',
                 textDecoration: 'none',
