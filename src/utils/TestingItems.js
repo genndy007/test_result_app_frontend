@@ -13,5 +13,5 @@ export const pages = [
 
 export const settings = [
   {name: 'Settings', path: '/settings'},
-  {name: 'Log Out', path: '/logout'},
+  {name: 'Log Out', path: '/login'},
 ]

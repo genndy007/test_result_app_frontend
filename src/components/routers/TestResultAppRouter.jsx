@@ -8,7 +8,7 @@ import {Route, Routes} from "react-router";
 const TestResultAppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<div>Home</div>} />
+      <Route path="/home" element={<div>Home</div>} />
       <Route path="projects" element={<ProjectsPage/>} />
       <Route path="test_cases" element={<TestCasesPage/>} />
       <Route path="test_suites" element={<TestSuitesPage/>}/>

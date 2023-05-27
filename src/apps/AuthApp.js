@@ -1,10 +1,10 @@
 import React from 'react';
-import SignInPage from "../pages/SignInPage";
+import AuthAppRouter from "../components/routers/AuthAppRouter";
 
 const AuthApp = ({loginFunc}) => {
   return (
     <div className="AuthApp">
-      <SignInPage loginFunc={loginFunc}/>
+      <AuthAppRouter loginFunc={loginFunc}/>
     </div>
   );
 };
