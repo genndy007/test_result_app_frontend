@@ -1,11 +1,11 @@
 import React from 'react';
-import ProjectsPage from "../pages/ProjectsPage";
-import TestCasesPage from "../pages/TestCasesPage";
-import TestSuitesPage from "../pages/TestSuitesPage";
-import TestRunsPage from "../pages/TestRunsPage";
+import ProjectsPage from "../../pages/ProjectsPage";
+import TestCasesPage from "../../pages/TestCasesPage";
+import TestSuitesPage from "../../pages/TestSuitesPage";
+import TestRunsPage from "../../pages/TestRunsPage";
 import {Route, Routes} from "react-router";
 
-const MainRouter = () => {
+const TestResultAppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<div>Home</div>} />
@@ -20,4 +20,4 @@ const MainRouter = () => {
   );
 };
 
-export default MainRouter;
+export default TestResultAppRouter;

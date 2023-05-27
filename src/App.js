@@ -1,21 +1,18 @@
-import React from "react";
+import * as React from "react";
+import TestResultApp from "./apps/TestResultApp";
 
-import MainAppBar from "./components/appbars/MainAppBar/MainAppBar";
-import ActiveProjectUserAppBar from "./components/appbars/ActiveProjectUserAppBar";
-import MainRouter from "./components/MainRouter";
-
-import {projects} from "./utils/TestingItems"
 
 function App() {
-    return (
-        <div className="App">
-          <ActiveProjectUserAppBar projectName={projects[0].name} userName="Hennadii Kochev"/>
-          <br/>
-          <MainAppBar/>
-          <br/>
-          <MainRouter/>
-        </div>
-    );
+  const [isAuthenticated, setIsAuthenticated] = React.useState(true);
+  const logoutUser = () => {setIsAuthenticated(false)}
+  const loginUser = () => {setIsAuthenticated(true)}
+  return (
+      <div className="App">
+        {isAuthenticated ? (
+          <TestResultApp/>
+        ) : "Not Authenticated"}
+      </div>
+  );
 }
 
 export default App;
