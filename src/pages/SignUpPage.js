@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import Copyright from "../components/Copyright";
+import Copyright from "../components/common/Copyright";
 import MyLink from "../components/appbars/MainAppBar/MyLink";
 
 
