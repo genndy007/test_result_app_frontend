@@ -30,10 +30,11 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export default function SignInPage() {
+const SignInPage = ({loginFunc}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    loginFunc();
     console.log({
       email: data.get('email'),
       password: data.get('password'),
@@ -110,3 +111,5 @@ export default function SignInPage() {
     </ThemeProvider>
   );
 }
+
+export default SignInPage;

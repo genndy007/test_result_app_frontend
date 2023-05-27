@@ -4,7 +4,7 @@ import SignInPage from "../pages/SignInPage";
 const AuthApp = ({loginFunc}) => {
   return (
     <div className="AuthApp">
-      <SignInPage/>
+      <SignInPage loginFunc={loginFunc}/>
     </div>
   );
 };
