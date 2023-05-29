@@ -4,7 +4,30 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {Fragment} from "react";
+import Box from "@mui/material/Box";
 
+
+const TestCaseAccordionContent = ({testCase}) => {
+  return (
+    <Fragment sx={{display: "flex"}}>
+      <Box sx={{display: 'flex', flexDirection: 'column'}}>
+        <Typography sx={{ fontWeight: 700 , mb: 2}}>Pre-Conditions</Typography>
+        <Typography sx={{fontWeight: 400}}>{testCase.precondition}</Typography>
+      </Box>
+      <Box sx={{display: 'flex', flexDirection: 'column'}}>
+        <Typography sx={{ fontWeight: 700 , mb: 2}}>Test Steps</Typography>
+        {testCase.testSteps.map((testStep) => (
+          <Typography>{testStep.order}: {testStep.content}</Typography>
+        ))}
+      </Box>
+      <Box sx={{display: 'flex', flexDirection: 'column'}}>
+        <Typography sx={{ fontWeight: 700 , mb: 2}}>Post-Conditions</Typography>
+        <Typography sx={{fontWeight: 400}}>{testCase.postcondition}</Typography>
+      </Box>
+    </Fragment>
+  );
+}
 
 const TestCaseAccordion = ({testCase, open, onChange}) => {
   return (
@@ -19,10 +42,8 @@ const TestCaseAccordion = ({testCase, open, onChange}) => {
         </Typography>
         <Typography sx={{ color: 'text.secondary' }}>{testCase.description}</Typography>
       </AccordionSummary>
-      <AccordionDetails>
-        <Typography>
-          Some content
-        </Typography>
+      <AccordionDetails sx={{display: 'flex', justifyContent: 'space-between'}}>
+        <TestCaseAccordionContent testCase={testCase}/>
       </AccordionDetails>
     </Accordion>
   );
