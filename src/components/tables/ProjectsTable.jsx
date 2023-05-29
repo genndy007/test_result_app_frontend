@@ -8,6 +8,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import SetActiveProjectButton from "../buttons/SetActiveProjectButton";
+import Button from "@mui/material/Button";
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -39,9 +42,10 @@ const ProjectsTable = ({projects}) => {
         <TableHead>
           <TableRow>
             <StyledTableCell>Project Name</StyledTableCell>
-            <StyledTableCell align="right">Description</StyledTableCell>
-            <StyledTableCell align="right">Is Active</StyledTableCell>
-            <StyledTableCell align="right">Change state</StyledTableCell>
+            <StyledTableCell align="center">Description</StyledTableCell>
+            <StyledTableCell align="center">Is Active</StyledTableCell>
+            <StyledTableCell align="center">Change state</StyledTableCell>
+            <StyledTableCell align="center">Actions</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -50,9 +54,13 @@ const ProjectsTable = ({projects}) => {
               <StyledTableCell component="th" scope="row">
                 {project.name}
               </StyledTableCell>
-              <StyledTableCell align="right">{project.description}</StyledTableCell>
-              <StyledTableCell align="right">{project.isActive ? "Yes" : "No"}</StyledTableCell>
-              <StyledTableCell align="right">{!project.isActive ? <SetActiveProjectButton projectId={project.id}/> : null}</StyledTableCell>
+              <StyledTableCell align="center">{project.description}</StyledTableCell>
+              <StyledTableCell align="center">{project.isActive ? "Yes" : "No"}</StyledTableCell>
+              <StyledTableCell align="center">{!project.isActive ? <SetActiveProjectButton projectId={project.id}/> : null}</StyledTableCell>
+              <StyledTableCell align="right">
+                <Button><EditIcon/></Button>
+                <Button><DeleteForeverIcon/></Button>
+              </StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
