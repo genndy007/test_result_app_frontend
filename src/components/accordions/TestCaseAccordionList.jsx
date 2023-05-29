@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react';
 import TestCaseAccordion from "./TestCaseAccordion";
 
-import {testCases} from "../../utils/TestingItems";
 
 const TestCaseAccordionList = ({testCases}) => {
   const [open, setOpen] = React.useState(false);
