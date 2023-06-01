@@ -88,6 +88,53 @@ export const testRuns = [
         id: 2,
         name: 'Test case 2 name',
         description: 'Some 2 Description',
+        status: 'Successful',
+        precondition: 'Before status 222',
+        postcondition: 'After status 22222',
+        testSteps: [
+          {
+            content: 'Step 1 content for 2',
+            order: 1,
+          },
+          {
+            content: 'Step 2 content for 2',
+            order: 2,
+          },
+        ]
+      },
+    ]
+  },
+  {
+    id: 2,
+    testSuite: {
+      name: "Test suite 2 name",
+      description: "Suite 2 description"
+    },
+    result: 'Re-Test',
+    timestamp: '2023-05-02 22:34:56',
+    testCases: [
+      {
+        id: 1,
+        name: 'Test case 1 name',
+        description: 'Some Description',
+        status: 'Failure',
+        precondition: 'Before status 1',
+        postcondition: 'After status 1',
+        testSteps: [
+          {
+            content: 'Step 1 content',
+            order: 1,
+          },
+          {
+            content: 'Step 2 content',
+            order: 2,
+          },
+        ]
+      },
+      {
+        id: 2,
+        name: 'Test case 2 name',
+        description: 'Some 2 Description',
         status: 'Failure',
         precondition: 'Before status 222',
         postcondition: 'After status 22222',

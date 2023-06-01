@@ -17,10 +17,10 @@ const TestRunAccordion = ({testRun, open, onChange}) => {
         aria-controls="panel1bh-content"
         id="panel1bh-header"
       >
-        <Typography sx={{ width: '33%', flexShrink: 0 }}>
-          Run for '{testRun.testSuite.name}'
+        <Typography sx={{ width: '67%', flexShrink: 0 }}>
+          Run for '{testRun.testSuite.name}' at {testRun.timestamp}
         </Typography>
-        <Typography sx={{ color: 'text.secondary' }}>Date: {testRun.timestamp}</Typography>
+        <Typography sx={{ color: 'text.secondary' }}>Result: {testRun.result}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <TestRunContentTable testRun={testRun}/>
