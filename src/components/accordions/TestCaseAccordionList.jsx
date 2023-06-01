@@ -1,13 +1,12 @@
 import React, {Fragment} from 'react';
 import TestCaseAccordion from "./TestCaseAccordion";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import Table from "@mui/material/Table";
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableCell from '@mui/material/TableCell';
 
 
 const TestCaseAccordionList = ({testCases}) => {
