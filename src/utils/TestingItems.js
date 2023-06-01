@@ -85,7 +85,7 @@ export const testSuites = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     name: 'Test suite 2 name',
     description: "Suite 2 description",
     testCases: [

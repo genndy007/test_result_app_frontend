@@ -5,10 +5,39 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import {Fragment} from "react";
 import Box from "@mui/material/Box";
+import Grid from '@mui/material/Grid';
 
-import Button from "@mui/material/Button";
+import {styled} from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+const TestCasesGrid = ({testCases}) => {
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        {testCases.map((testCase) => (
+          <Grid item xs={6}>
+            <Item>
+              Case: {testCase.name}
+              <br/>
+              <br/>
+              About: {testCase.description}
+            </Item>
+
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+}
 
 
 const TestSuiteAccordion = ({testSuite, open, onChange}) => {
@@ -26,6 +55,9 @@ const TestSuiteAccordion = ({testSuite, open, onChange}) => {
           {testSuite.description}
         </Typography>
       </AccordionSummary>
+      <AccordionDetails>
+        <TestCasesGrid testCases={testSuite.testCases}/>
+      </AccordionDetails>
     </Accordion>
   );
 };
