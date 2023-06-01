@@ -56,6 +56,37 @@ export const testCases = [
 ]
 
 
+export const testSuites = [
+  {
+    id: 1,
+    name: 'Test suite name',
+    description: "Suite description",
+    testCases: [
+      {
+        id: 1,
+        name: 'Test case 1 name',
+        description: 'Some1 Description',
+      },
+      {
+        id: 1,
+        name: 'Test case 2 name',
+        description: 'Some2 Description',
+      },
+      {
+        id: 1,
+        name: 'Test case 3 name',
+        description: 'Some3 Description',
+      },
+      {
+        id: 1,
+        name: 'Test case 4 name',
+        description: 'Some4 Description',
+      },
+    ],
+  },
+]
+
+
 export const testRuns = [
   {
     id: 1,
