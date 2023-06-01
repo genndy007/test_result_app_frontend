@@ -59,8 +59,8 @@ export const testCases = [
 export const testSuites = [
   {
     id: 1,
-    name: 'Test suite name',
-    description: "Suite description",
+    name: 'Test suite 1 name',
+    description: "Suite 1 description",
     testCases: [
       {
         id: 1,
@@ -81,6 +81,28 @@ export const testSuites = [
         id: 1,
         name: 'Test case 4 name',
         description: 'Some4 Description',
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: 'Test suite 2 name',
+    description: "Suite 2 description",
+    testCases: [
+      {
+        id: 1,
+        name: 'Test case 1 name',
+        description: 'Some1 Description',
+      },
+      {
+        id: 2,
+        name: 'Test case 2 name',
+        description: 'Some2 Description',
+      },
+      {
+        id: 3,
+        name: 'Test case 3 name',
+        description: 'Some3 Description',
       },
     ],
   },
