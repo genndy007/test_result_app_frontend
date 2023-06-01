@@ -67,6 +67,7 @@ export const testRuns = [
     timestamp: '2023-05-01 12:34:56',
     testCases: [
       {
+        id: 1,
         name: 'Test case 1 name',
         description: 'Some Description',
         status: 'Successful',
@@ -84,6 +85,7 @@ export const testRuns = [
         ]
       },
       {
+        id: 2,
         name: 'Test case 2 name',
         description: 'Some 2 Description',
         status: 'Failure',

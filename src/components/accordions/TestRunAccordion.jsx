@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {Fragment} from "react";
 import Box from "@mui/material/Box";
+import TestRunContentTable from "../tables/TestRunContentTable";
+
 
 const TestRunAccordion = ({testRun, open, onChange}) => {
   return (
@@ -18,7 +20,11 @@ const TestRunAccordion = ({testRun, open, onChange}) => {
         <Typography sx={{ width: '33%', flexShrink: 0 }}>
           Run for '{testRun.testSuite.name}'
         </Typography>
+        <Typography sx={{ color: 'text.secondary' }}>Date: {testRun.timestamp}</Typography>
       </AccordionSummary>
+      <AccordionDetails>
+        <TestRunContentTable testRun={testRun}/>
+      </AccordionDetails>
     </Accordion>
   );
 };
