@@ -34,7 +34,6 @@ const TestCaseAccordionList = ({testCases}) => {
           ))}
         </TableBody>
       </Table>
-
     </Fragment>
   );
 };
