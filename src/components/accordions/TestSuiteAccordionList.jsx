@@ -4,6 +4,8 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import AddIcon from '@mui/icons-material/Add';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Table from "@mui/material/Table";
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
@@ -26,6 +28,10 @@ const TestSuiteAccordionList = ({testSuites}) => {
             <TableRow>
               <TableCell style={{width: '90%'}}>
                 <TestSuiteAccordion testSuite={testSuite} open={open} onChange={accordionChange}/>
+              </TableCell>
+              <TableCell>
+                <Button>Case+</Button>
+                <Button><PlayCircleOutlineIcon/></Button>
               </TableCell>
               <TableCell>
                 <Button><EditIcon/></Button>

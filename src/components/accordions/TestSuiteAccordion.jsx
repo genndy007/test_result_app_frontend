@@ -4,7 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+
 import {Fragment} from "react";
 import Box from "@mui/material/Box";
 
@@ -22,9 +22,8 @@ const TestSuiteAccordion = ({testSuite, open, onChange}) => {
         <Typography sx={{ width: '33%', flexShrink: 0 }}>
           {testSuite.name}
         </Typography>
-        <Typography>
-          <Button>Add Case</Button>
-          <Button><PlayCircleOutlineIcon/></Button>
+        <Typography sx={{ width: '40%', flexShrink: 0 }}>
+          {testSuite.description}
         </Typography>
       </AccordionSummary>
     </Accordion>
