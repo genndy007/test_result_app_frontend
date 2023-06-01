@@ -1,10 +1,7 @@
 import React, {Fragment} from 'react';
-import TestCaseAccordion from "./TestCaseAccordion";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import AddIcon from '@mui/icons-material/Add';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Table from "@mui/material/Table";
 import TableBody from '@mui/material/TableBody';
