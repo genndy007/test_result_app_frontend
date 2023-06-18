@@ -6,26 +6,34 @@ const authHeader = (token) => {
   return {'Authorization': `Bearer ${token}`}
 }
 
-const logIn = async (username, password) => {
+export const logIn = (username, password) => {
   const loginUrl = BACKEND_URL + '/auth/login'
-  const response = await axios.post(loginUrl, {
+  const response = axios.post(loginUrl, {
     username: username,
     password: password,
+  }).then(response => {
+    console.log(response.data)
+    if (response.status === 200) {
+      localStorage.setItem('jwt', response.data['jwt'])
+      return true;
+    }
+    return false;
   })
-
-  console.log(response.data)
-  localStorage.setItem('jwt', response.data['jwt'])
 }
 
-const isAuthenticated = async () => {
+export const logOut = () => {
+  localStorage.clear()
+}
+
+export const isAuthenticated = () => {
   const token = localStorage.getItem('jwt');
   if (!token) return false;
 
   const meUrl = BACKEND_URL + '/auth/me'
-  const response = await axios.post(meUrl, null, {
+  const response = axios.post(meUrl, null, {
     headers: authHeader(token)
+  }).then(response => {
+    return response.status === 200;
   })
 
-  if (response.status !== 200) return false;
-  return true;
 }
