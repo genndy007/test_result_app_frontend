@@ -17,7 +17,7 @@ const TestCaseAccordionContent = ({testCase}) => {
       </Box>
       <Box sx={{display: 'flex', flexDirection: 'column'}}>
         <Typography sx={{ fontWeight: 700 , mb: 2}}>Test Steps</Typography>
-        {testCase.testSteps.map((testStep) => (
+        {testCase.test_steps.map((testStep) => (
           <Typography>{testStep.order}: {testStep.content}</Typography>
         ))}
       </Box>
