@@ -35,8 +35,8 @@ const ProjectsTable = ({projects}) => {
                 {project.name}
               </StyledTableCell>
               <StyledTableCell align="center">{project.description}</StyledTableCell>
-              <StyledTableCell align="center">{project.isActive ? "Yes" : "No"}</StyledTableCell>
-              <StyledTableCell align="center">{!project.isActive ? <SetActiveProjectButton projectId={project.id}/> : null}</StyledTableCell>
+              <StyledTableCell align="center">{project.is_active ? "Yes" : "No"}</StyledTableCell>
+              <StyledTableCell align="center">{!project.is_active ? <SetActiveProjectButton projectId={project.id}/> : null}</StyledTableCell>
               <StyledTableCell align="center">
                 <Button><EditIcon/></Button>
                 <Button><DeleteForeverIcon/></Button>
