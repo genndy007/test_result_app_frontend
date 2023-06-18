@@ -56,7 +56,7 @@ const TestSuiteAccordion = ({testSuite, open, onChange}) => {
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <TestCasesGrid testCases={testSuite.testCases}/>
+        <TestCasesGrid testCases={testSuite.test_cases}/>
       </AccordionDetails>
     </Accordion>
   );
