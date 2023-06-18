@@ -7,7 +7,7 @@ import TestResultAppRouter from "../components/routers/TestResultAppRouter";
 const TestResultApp = ({logoutFunc}) => {
   return (
     <div className="TestResultApp">
-      <ActiveProjectUserAppBar projectName={projects[0].name} userName="Hennadii Kochev"/>
+      <ActiveProjectUserAppBar/>
       <br/>
       <MainAppBar logoutFunc={logoutFunc}/>
       <br/>
