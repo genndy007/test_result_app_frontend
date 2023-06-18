@@ -25,7 +25,7 @@ const TestRunContentTable = ({testRun}) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {testRun.testCases.map((testCase) => (
+          {testRun.test_cases.map((testCase) => (
             <StyledTableRow key={testCase.id}>
               <StyledTableCell align="center">{testCase.name}</StyledTableCell>
               <StyledTableCell align="center">{testCase.description}</StyledTableCell>

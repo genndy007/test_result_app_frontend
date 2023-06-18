@@ -18,7 +18,7 @@ const TestRunAccordion = ({testRun, open, onChange}) => {
         id="panel1bh-header"
       >
         <Typography sx={{ width: '67%', flexShrink: 0 }}>
-          Run for '{testRun.testSuite.name}' at {testRun.timestamp}
+          Run for '{testRun.test_suite.name}' at {testRun.timestamp}
         </Typography>
         <Typography sx={{ color: 'text.secondary' }}>Result: {testRun.result}</Typography>
       </AccordionSummary>
