@@ -14,3 +14,10 @@ export async function getTestRunReport(testRunId) {
 
   window.open(response.data.report_url, '_blank')
 }
+
+export async function createNewTestRun(test_suite_id, result, test_case_statuses){
+  const url = `${BACKEND_URL}/test_runs/new`;
+  const response = await axios.post(url, {
+    test_suite_id, result, test_case_statuses
+  })
+}
