@@ -8,3 +8,10 @@ export async function getProjects() {
   const response = await axios.get(url);
   return response.data;
 }
+
+export async function setActiveProject(id) {
+  const url = `${BACKEND_URL}/projects/set_active`
+  const response = await axios.post(url, null, {
+    params: {id},
+  })
+}
