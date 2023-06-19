@@ -7,6 +7,7 @@ import Table from "@mui/material/Table";
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import {getTestRunReport} from "../../api/test_runs";
 
 const TestRunAccordionList = ({testRuns}) => {
   const [open, setOpen] = React.useState(false);
@@ -25,7 +26,7 @@ const TestRunAccordionList = ({testRuns}) => {
                 <TestRunAccordion testRun={testRun} open={open} onChange={accordionChange}/>
               </TableCell>
               <TableCell>
-                <Button><PictureAsPdfIcon/></Button>
+                <Button onClick={async () => {await getTestRunReport(testRun.id)}}><PictureAsPdfIcon/></Button>
               </TableCell>
             </TableRow>
           ))}
